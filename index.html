@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <style>
+    .score-box {
+      border: 2px solid black;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-centered">
+        <div id="plr" class="column is-one-third score-box">
+          <p><strong>
+              <h1>PLAYER</h1>
+            </strong></p>
+          <div id="plrScore" class="title is-1">0</div>
+          <footer class="card-footer">
+            <button class="is-primary button card-footer-item is-large" id="rBut">Rock</button>
+            <button class="is-info button card-footer-item is-large" id="pBut">Paper</button>
+            <button class="is-danger button card-footer-item is-large" id="sBut">Scissor</button>
+          </footer>
+          <div class="img">
+            <img id="plrImg">
+          </div>
+        </div>
+        <div id="center" class="column is-narrow has-text-centered">
+          <p><strong>vs</strong></p>
+          <label for="playto" class="label is-large is-inline">Playing to</label>
+          <div class="select is-rounded">
+            <select id="playto">
+              <option value='3'>3</option>
+              <option value='5'>5</option>
+              <option value='7'>7</option>
+              <option value='9'>9</option>
+              <option value='11'>11</option>
+            </select>
+          </div>
+          <div id="whoWins" class="has-text-weight-bold">
+            May the best man win.
+          </div>
+          <button class="is-warning button card-footer-item is-large" id="reset">Reset</button>
+        </div>
+        <div id="cpu" class="column is-one-third score-box">
+          <p><strong>
+              <h1>CPU</h1>
+            </strong></p>
+          <div id="cpuScore" class='title is-1'>0</div>
+          <footer class="card-footer">
+            <button disabled class="is-primary button card-footer-item is-large">Rock</button>
+            <button disabled class="is-info button card-footer-item is-large">Paper</button>
+            <button disabled class="is-danger button card-footer-item is-large">Scissor</button>
+          </footer>
+          <div class="img">
+            <img id="cpuImg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+
+</html>
